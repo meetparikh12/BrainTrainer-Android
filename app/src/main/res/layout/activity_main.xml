@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3BAFE9E4"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#5EC4BA"
+        android:onClick="startGame"
+        android:padding="30dp"
+        android:text="@string/go"
+        android:textColor="#000"
+        android:textSize="80sp"
+        android:textStyle="italic" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#332D2F"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#C9E3F0"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#641631"
+            android:onClick="buttonPressed"
+            android:tag="1"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/question"
+            app:layout_constraintTop_toBottomOf="@+id/question" />
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="60dp"
+            android:background="#641631"
+            android:onClick="buttonPressed"
+            android:tag="0"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/question"
+            app:layout_constraintTop_toBottomOf="@+id/question" />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#641631"
+            android:onClick="buttonPressed"
+            android:tag="2"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/bt1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/bt1"
+            app:layout_constraintTop_toBottomOf="@+id/bt1" />
+
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#641631"
+            android:onClick="buttonPressed"
+            android:tag="3"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/bt2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/bt2"
+            app:layout_constraintTop_toBottomOf="@+id/bt2" />
+
+        <TextView
+            android:id="@+id/countDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/bt4"
+            app:layout_constraintStart_toStartOf="@+id/bt3"
+            app:layout_constraintTop_toBottomOf="@+id/bt3" />
+
+        <TextView
+            android:id="@+id/viewScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/bt4"
+            app:layout_constraintStart_toStartOf="@+id/bt3"
+            app:layout_constraintTop_toBottomOf="@+id/bt3" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#EC930D"
+            android:onClick="resetGame"
+            android:padding="10dp"
+            android:text="@string/reset"
+            android:visibility="invisible"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/viewScore"
+            app:layout_constraintStart_toStartOf="@+id/viewScore"
+            app:layout_constraintTop_toBottomOf="@+id/viewScore" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
